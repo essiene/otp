@@ -1,0 +1,261 @@
+<html>
+<title>Currently in the 'pu' branch</title>
+<style type="text/css" media="all">
+    body {
+      width: 600px;
+    }
+</style>
+<body>
+<h1>Currently in the 'pu' branch</h1>
+<p>The comment about each topic branch is taken from the latest
+<em>What's cooking in erlang/otp</em> email and may no longer apply if
+the topic branch has been updated.
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/739236ee47239dc078b14fbe56dfb26bc511009f">pg/fix-crypto-rc4_encrypt_with_state</a> (crypto):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/c1af26a59c46a6f9d295a0374326574157f6d8a5">Fix RC4 stream cipher binding (crypto:rc4_encrypt_with_state/2)</a></li>
+</ul>
+<p><i>New topic branch</i>
+<p>
+</li>
+<li><a href="http://github.com/erlang/otp/commit/06ed47bb957d6ed01264a70ac18e02eca8ad1cce">ml/add-os-pid-to-port-info</a> (erts):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/b2d85bfd38896f345cebd5ba352591fbb7d23019">Extend erlang:port_info/1,2 to show the OS pid of a spawned process</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/bcf3e4bedf65cb960f3e9f7de4647a14c56dc0a7">tl/ssl-fix-packet-line-mode-list</a> (ssl):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/06f147cc959df0c40032e310b9d1ab4d76be46e2">Correct behaviour if {packet, line} and mode list are given</a></li>
+<li><a href="http://github.com/erlang/otp/commit/5e6972fc5724985e018565be06027f2c6b409d56">Change packet_line_decode/1 to not only check binary mode</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/b2d48fefae604b88efa27e9edef4cb9047019499">jp/ssl-foaf</a> (ssl):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/99717921bee22a91b03c40a1b05ef72b3c67e558">Allow server to use verify_peer and have no cacert</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/f282b8fe62b0b9864a593a764536caea09a46b74">rt/solaris-pty-handling-fixes</a> (erts):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/2ba48188534f4afafb4cba6cc384c0847f4e580e">Add corrected support for Solaris PTYs to run_erl</a></li>
+<li><a href="http://github.com/erlang/otp/commit/edfe4b9e94762fb48da2d533f83a0e7c095fad7a">Fix a typo that leads to syntax errors with DEBUG defined in run_erl</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/ab05f4774818b74ed35569731b0eb926fe1e5b2a">sa/callback-attr</a> (compiler, inets, kernel, otp, stdlib):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/b12de0a2d6b68a72124accc2b5a79fb8d33f0032">Add callback specs into 'application' module in kernel</a></li>
+<li><a href="http://github.com/erlang/otp/commit/2f271965e2af3d6437e02ac094b61ff8b226e4bb">Add callback specs to tftp module following internet documentation</a></li>
+<li><a href="http://github.com/erlang/otp/commit/cc249ece21a4bb105a869887d308423ce5d36423">Add callback specs to inets_service module following possibly deprecated comments</a></li>
+<li><a href="http://github.com/erlang/otp/commit/6df97f4d07fb1de93edd02418c4aeb5432bd50bd">Add '-callback' attributes in stdlib's behaviours</a></li>
+<li><a href="http://github.com/erlang/otp/commit/c864c174741ed5c36771c4bda991ea141ae266ba">Update primary bootstrap</a></li>
+<li><a href="http://github.com/erlang/otp/commit/5b455e866909fd99f91c357e16601fd6e2b8b18e">Automatical generation of 'behaviour_info' function from '-callback' attributes</a></li>
+<li><a href="http://github.com/erlang/otp/commit/2f6c340014864e5686b945c2473f84049b56f74e">Add '-callback' attribute to language syntax</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/329a57e78508ee405045d01262e0c576163fb0f2">pan/local_univ_time_bsd/OTP-8580</a> (erts):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/7e6fe78278c203c3756ce0d6bf23a6bd6cf7bb5d">Teach erl_time_sup to handle timezones w/o DST on FreeBSD as on other platforms</a></li>
+</ul>
+<p>This branch replaces bg/safer-local_to_univ.
+
+<p>
+</li>
+<li><a href="http://github.com/erlang/otp/commit/afd2d1fbfd6f1563b91e463c7bfe96f6358ca036">ms/inet-bug-fixes</a> (erts, kernel):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/c8070ff06961773ceddc1c8f0fdb000c4b1ed2cd">inet: support retrieving MAC address on BSD</a></li>
+<li><a href="http://github.com/erlang/otp/commit/d61d41e235bc464a15925e6fd1b7e9138477d3b3">inet: fix getservbyname buffer overflow</a></li>
+<li><a href="http://github.com/erlang/otp/commit/227d3f3ff078426ae79b7f2313bc8be915c5e252">inet: fix ifr_name buffer overflow</a></li>
+<li><a href="http://github.com/erlang/otp/commit/cfcb9626d95640e42972c2284c08b61240f11d0c">inet: null terminate ifr_name buffer</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/6a0efd89669867e3f0a2031f493b0e5663c9f5bf">jn/gen_stream</a> (stdlib):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/38a4083a7a58481cd0d53acecf706c2800812929">Track gen_stream processes directly for accurate test results</a></li>
+<li><a href="http://github.com/erlang/otp/commit/7694a74dfa0595c97923ee5416d791c731a2fdfa">Patch dev to reproduce jn/gen_stream</a></li>
+</ul>
+<p> . Add new gen_stream behaviour for efficiently consuming serial streams (65f3db8)
+
+<p>This topic branch has a failing test case:
+
+<p>shell_SUITE:start_restricted_from_shell;
+    We have now tested with and without this topic branch and when
+    it is present that test case fails. We consider it proved
+    to be guilty. The test case does not fail when run standalone
+    so it seems to be tricky... Also, some of its own test cases
+    fail sporadicly.
+
+<p>Action expected from: Topic author.
+
+<p>
+</li>
+<li><a href="http://github.com/erlang/otp/commit/0a8cde78eb5d71f866f062e774773c169a5cd055">sv/epmd-check-listen</a> (erts):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/c5c8baa686b2cd5c43ecbf40fbb47d04f200b552">check return value of epmd server listen() call</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/be4f84fba1a43194ec22f00c7e000542dc3366cf">tj/ct-timestamp-granularity</a> (common_test):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/4d18f18a1d7ef4d0eca68aa1e5d7fe8a0cb4289d">Include milliseconds in timestamps in Common Test log entries</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/436fca8b4f82c56aa9bd8ee3d580a8f19e46ab42">ta/asn1ct-fix-whitespace</a> (asn1):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/c43d20b744dd953c01c10091f167a8a42bf194e5">asn1ct: change unusual whitespace char from 0xA0 to 0x20</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/96e2f0812ca9274e60a065dd90bae9f4be018201">pg/fix-hipe-load</a> (hipe):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/919619576f587055b7c7da070cb4903042c66601">Fix hipe:load/1</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/e581c4dfed031f9150011eaefa8baf5af04be7a4">rz/fix-httpc-docs</a> (inets):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/294dfc035a8b8342749cea249db3e1cb470079c4">Fix http client docs</a></li>
+<li><a href="http://github.com/erlang/otp/commit/7e417c300e6bf1d2dc06c455133a0d6539ae74e2">Fix broken links in inets docs</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/18577f4df546ba5f39fc20f2ec2afba160711de7">gc/gen-format-status-improvements</a> (stdlib):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/95ed86fc9893460751c5141ff872bdc13814a273">Fix format_status bug for unregistered gen_event processes</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/656898a56132c903caa09860aa94a2037051b998">pg/fix-segfault-on-crash_dump-with-hipe</a> (erts):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/089e48ca0c0486393dd1e886aa18fc4b870b1e32">Fix a bug that could produce a segmentation fault when dumping the crash log with hipe enabled and natively compiled modules</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/c395e5196d84946dd8b4a49af83d56627dd56dda">pg/hipe_crash_with_on_load</a> (erts):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/2862bd2f08a2d292a3480ae6769bf59b9ed34ea6">Fix crash when calling a module with an on_load attribute from a native module</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/1e7f8f028e389ff90d2a5aa94f4af850de41851c">mk/net-dragonfly-bsd-patches</a> (asn1, common_test, erl_interface, erts, et, mnesia, reltool, runtime_tools, test_server, wx):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/88a04a19d751c4c6712fc9b079e16d3976a4d731">Remove unused variables</a></li>
+<li><a href="http://github.com/erlang/otp/commit/69600625564ab3338b2bb2cbbc83da1ae28d6813">Use proper install method</a></li>
+<li><a href="http://github.com/erlang/otp/commit/2008472c314e9ae78ee0044bb265c0d10e1aed31">Add support for DragonFly BSD</a></li>
+<li><a href="http://github.com/erlang/otp/commit/2fb2a1e0b6f85f87035d5b160c330cea584e01fd">Add support for NetBSD</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/263d672326de4b42f82407f3b78b759ca6494e6c">sf/erts_de_busy_limit</a> (erts):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/67ed9ab1654b1fe5c41fddd5c74d1678a20297ae">Add flag-based setting for 'erts_de_busy_limit' constant</a></li>
+</ul>
+<p>This topic branch has multiple issues described in this email:
+
+<p>http://www.erlang.org/cgi-bin/ezmlm-cgi?3:mss:1303:201008:ldciadjdmjednikemjch
+
+<p>Action expected from: Topic author.
+
+<p>
+
+</li>
+<li><a href="http://github.com/erlang/otp/commit/a91ee4ae72dc91828e524a36d7a430d67627a690">pg/honor-start-type-in-rel-files</a> (sasl):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/759990082fe2a6da918ddb9e8cbc14f68acaf242">Honor start type in .rel files when building relup files</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/44242dfa0b2300fac95281ef2ef26fdea013c728">sb/make-files-like-erlc</a> (tools):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/5e9d05198cd00f74b99f697eb022ae0b2f31f136">Change make:files to behave more like erlc</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/f13576d77e591bc08480b72ab9963d5e4f85537b">uw/epmd-fullnames</a> (kernel):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/e0774bee2b75c56daa7288edc990488fa5c8d07e">Allow the erlang nodename host part to differ from the hostname</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/1f6bb0414c09e8a720ed80ec7822e4624b9aade9">jr/cover-src-path</a> (tools):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/b9d5068e78fac922a2e80af9973de24297a2140b">Fix searching for source files in analyse_to_file/*</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/145db77474f92ba4511b9f42ac7afb3c7999a79e">ta/asn1-reporting</a> (asn1):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/93face25db7222e5c0e4950caaa8acbf6d9bc2dc">asn1ct: Make formatting of errors and warnings consistent</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/e6aa25e0cb23465c777cddd8974d770d7df12abf">er/ei-decode_msg</a> (erl_interface):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/864091a37030eac122b4029377c05985338586fb">Add function to decode distribution header</a></li>
+</ul>
+<p>Needs documentation and test cases.
+
+<p>Action expected from: Topic author
+
+<p>
+</li>
+<li><a href="http://github.com/erlang/otp/commit/6466625990947060ccf4640768a7de5a91f1c9e2">jf/run_erl-disable-flow-control</a> (erts):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/d0775cd6bc64f5eec41d04e04441fe6a6e058927">Teach run_erl RUN_ERL_DISABLE_FLOWCNTRL for disabling flow control</a></li>
+</ul>
+<p></li>
+<li><a href="http://github.com/erlang/otp/commit/7176f9a8bbe41b0bb1dd7dae4c1b0d3ada1f766e">kr/gs-browser</a> (gs):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/802d15915daf790b4ff60543526ba61283933ead">Change lib/gs/src/tool_utils.erl to select multiple browsers other than Netscape</a></li>
+</ul>
+<p>This topic branch introduces a new call to the deprecated regexp module.
+
+<p>Action expected from: Topic author or anyone else with an interest to
+advance the topic
+
+<p>
+</li>
+<li><a href="http://github.com/erlang/otp/commit/8822bb2cb39791b0d139754071a07315ab9e1c1b">bg/temp-hipe-fixes</a> (compiler, hipe, kernel):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/234e13ea60502a14f42e696778ca09ed034e8879">Avoid crash by skipping compilation_SUITE:on_load/1</a></li>
+<li><a href="http://github.com/erlang/otp/commit/9fcb48b75a27cd9d2d245b263d2c7519e12c31db">Inline less aggressively for native-code compilation</a></li>
+<li><a href="http://github.com/erlang/otp/commit/ef71597b2ff78a1b87e56fd5df4221db178915eb">Crudely fix return type for the lists:key{search,find,member}/3</a></li>
+<li><a href="http://github.com/erlang/otp/commit/2a81b1afaa5d3b401d8b4a551da850de347309f0">seq_trace_SUITE: Don't native-compile</a></li>
+<li><a href="http://github.com/erlang/otp/commit/3befa76d1e24108acb5cb757157c2fb3384a8e51">Disable native code if on_load is used</a></li>
+<li><a href="http://github.com/erlang/otp/commit/97aa2daffc9824c88d7c7152b614408a1372261c">andor_SUITE: Don't native-compile</a></li>
+</ul>
+<p>This branch contains temporary workarounds to avoid failing test
+cases and is never intended to graduate.
+
+<p>
+</li>
+<li><a href="http://github.com/erlang/otp/commit/5c8f8eeed43dc3a868566f68790f266392a0b2c5">jp/dependencies_makefile</a> (compiler, erts):
+
+<ul>
+<li><a href="http://github.com/erlang/otp/commit/434e2ca3a238fe07bcd327ace4d90618511a98b4">squash! eliminate dialyzer warning</a></li>
+<li><a href="http://github.com/erlang/otp/commit/bf2708d3b92705320679c51ace9d2c208d779298">squash! fix snprintf for Windows</a></li>
+<li><a href="http://github.com/erlang/otp/commit/7cbc4374a3621e26067c187ce36d3e75dfa70873">Add dependencies Makefile generation to erlc(1) and compile(3)</a></li>
+</ul>
+<p>Approved in principle by the OTP Technical Board; now awaits a closer
+review of the implementation.
+
+<p>Action expected from: Björn Gustavsson (the reviewer)
+
+<p>
+</li>
+</ul>
+</body>
+</html>
