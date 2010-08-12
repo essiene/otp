@@ -541,19 +541,19 @@ handle_options(Opts0, Role) ->
     UserFailIfNoPeerCert = validate_option(fail_if_no_peer_cert, 
 					   proplists:get_value(fail_if_no_peer_cert, Opts, false)),
 
-    {Verify, FailIfNoPeerCert, CaCertDefault} = 
+    {Verify, FailIfNoPeerCert} =
 	%% Handle 0, 1, 2 for backwards compatibility
 	case proplists:get_value(verify, Opts, verify_none) of
 	    0 ->
-		{verify_none, false, ca_cert_default(verify_none, Role)};
+		{verify_none, false};
 	    1  ->
-		{verify_peer, false, ca_cert_default(verify_peer, Role)};
+		{verify_peer, false};
 	    2 ->
-		{verify_peer, true,  ca_cert_default(verify_peer, Role)};
+		{verify_peer, true};
 	    verify_none ->
-		{verify_none, false, ca_cert_default(verify_none, Role)};
+		{verify_none, false};
 	    verify_peer ->
-		{verify_peer, UserFailIfNoPeerCert, ca_cert_default(verify_peer, Role)};
+		{verify_peer, UserFailIfNoPeerCert};
 	    Value ->
 		throw({error, {eoptions, {verify, Value}}})
 	end,   
@@ -572,7 +572,7 @@ handle_options(Opts0, Role) ->
       keyfile    = handle_option(keyfile,  Opts, CertFile),
       key        = handle_option(key, Opts, undefined),
       password   = handle_option(password, Opts, ""),
-      cacertfile = handle_option(cacertfile, Opts, CaCertDefault),
+      cacertfile = handle_option(cacertfile, Opts, undefined),
       dhfile     = handle_option(dhfile, Opts, undefined),
       ciphers    = handle_option(ciphers, Opts, []),
       %% Server side option
@@ -698,16 +698,6 @@ validate_inet_option(active, Value)
     throw({error, {eoptions, {active,Value}}});
 validate_inet_option(_, _) ->
     ok.
-
-ca_cert_default(verify_none, _) ->
-    undefined;
-%% Client may leave verification up to the user
-ca_cert_default(verify_peer, client) ->
-    undefined;
-%% Server that wants to verify_peer must have
-%% some trusted certs.
-ca_cert_default(verify_peer, server) ->
-    "".
 
 emulated_options() ->
     [mode, packet, active, header, packet_size].
